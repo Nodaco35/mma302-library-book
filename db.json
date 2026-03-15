@@ -1,0 +1,913 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Borrower User",
+      "email": "user@example.com",
+      "password": "123456",
+      "role": "borrower"
+    },
+    {
+      "id": 2,
+      "name": "Library Staff",
+      "email": "staff@example.com",
+      "password": "123456",
+      "role": "staff"
+    },
+    {
+      "name": "nodaco",
+      "email": "cuongndhe180335@fpt.edu.vn",
+      "password": "123123",
+      "role": "borrower",
+      "createdAt": "2026-03-10T10:00:51.567Z",
+      "id": 3
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "code": "BK001",
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "category": "Programming",
+      "description": "A book about writing cleaner code.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 2,
+      "code": "BK002",
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt",
+      "category": "Programming",
+      "description": "A practical guide to programming best practices and career development.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 3,
+      "code": "BK003",
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "category": "Databases",
+      "description": "Deep dive into data systems, databases, and distributed systems.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 4,
+      "code": "BK004",
+      "title": "Computer Networking: A Top-Down Approach",
+      "author": "James F. Kurose",
+      "category": "Networking",
+      "description": "Comprehensive introduction to networking concepts and protocols.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 5,
+      "code": "BK005",
+      "title": "Security Engineering",
+      "author": "Ross Anderson",
+      "category": "Security",
+      "description": "An in-depth exploration of security systems and design.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 6,
+      "code": "BK006",
+      "title": "Hands-On Machine Learning",
+      "author": "Aurelien Geron",
+      "category": "Data Science",
+      "description": "A practical introduction to machine learning with Python.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 7,
+      "status": "available"
+    },
+    {
+      "id": 7,
+      "code": "BK007",
+      "title": "You Don't Know JS Yet",
+      "author": "Kyle Simpson",
+      "category": "Web Development",
+      "description": "Deep understanding of JavaScript and its core mechanisms.",
+      "coverImage": "",
+      "totalCopies": 7,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 8,
+      "code": "BK008",
+      "title": "Docker Deep Dive",
+      "author": "Nigel Poulton",
+      "category": "DevOps",
+      "description": "Guide to containerization and Docker architecture.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 9,
+      "code": "BK009",
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "category": "Programming",
+      "description": "Improving the design of existing code through refactoring.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 10,
+      "code": "BK010",
+      "title": "Database System Concepts",
+      "author": "Abraham Silberschatz",
+      "category": "Databases",
+      "description": "Fundamentals of database systems and architecture.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 11,
+      "code": "BK011",
+      "title": "TCP/IP Illustrated",
+      "author": "W. Richard Stevens",
+      "category": "Networking",
+      "description": "Detailed explanation of TCP/IP protocols.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 12,
+      "code": "BK012",
+      "title": "The Web Application Hacker's Handbook",
+      "author": "Dafydd Stuttard",
+      "category": "Security",
+      "description": "Practical guide to finding and exploiting web vulnerabilities.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 13,
+      "code": "BK013",
+      "title": "Python for Data Analysis",
+      "author": "Wes McKinney",
+      "category": "Data Science",
+      "description": "Techniques for data manipulation and analysis with Python.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 14,
+      "code": "BK014",
+      "title": "Eloquent JavaScript",
+      "author": "Marijn Haverbeke",
+      "category": "Web Development",
+      "description": "Modern introduction to programming with JavaScript.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 15,
+      "code": "BK015",
+      "title": "Kubernetes Up & Running",
+      "author": "Brendan Burns",
+      "category": "DevOps",
+      "description": "Guide to container orchestration with Kubernetes.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 16,
+      "code": "BK016",
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "category": "Programming",
+      "description": "Guide to software architecture and design principles.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 17,
+      "code": "BK017",
+      "title": "SQL Performance Explained",
+      "author": "Markus Winand",
+      "category": "Databases",
+      "description": "Understanding how SQL queries perform and how to optimize them.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 18,
+      "code": "BK018",
+      "title": "Network Warrior",
+      "author": "Gary A. Donahue",
+      "category": "Networking",
+      "description": "Hands-on networking guide for real-world infrastructure.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 19,
+      "code": "BK019",
+      "title": "Practical Malware Analysis",
+      "author": "Michael Sikorski",
+      "category": "Security",
+      "description": "Techniques and tools for analyzing malicious software.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 20,
+      "code": "BK020",
+      "title": "Data Science from Scratch",
+      "author": "Joel Grus",
+      "category": "Data Science",
+      "description": "Building data science tools and algorithms from the ground up.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 21,
+      "code": "BK021",
+      "title": "Learning React",
+      "author": "Alex Banks",
+      "category": "Web Development",
+      "description": "Introduction to building modern web apps using React.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 22,
+      "code": "BK022",
+      "title": "The DevOps Handbook",
+      "author": "Gene Kim",
+      "category": "DevOps",
+      "description": "How DevOps practices improve deployment and system reliability.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 23,
+      "code": "BK023",
+      "title": "Working Effectively with Legacy Code",
+      "author": "Michael Feathers",
+      "category": "Programming",
+      "description": "Techniques to safely refactor and improve legacy codebases.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 24,
+      "code": "BK024",
+      "title": "MongoDB: The Definitive Guide",
+      "author": "Kristina Chodorow",
+      "category": "Databases",
+      "description": "Complete guide to MongoDB database architecture and usage.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 25,
+      "code": "BK025",
+      "title": "High Performance Browser Networking",
+      "author": "Ilya Grigorik",
+      "category": "Networking",
+      "description": "Optimizing web performance through networking insights.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 26,
+      "code": "BK026",
+      "title": "Blue Team Handbook",
+      "author": "Don Murdoch",
+      "category": "Security",
+      "description": "Security operations and incident response techniques.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 27,
+      "code": "BK027",
+      "title": "Deep Learning with Python",
+      "author": "Francois Chollet",
+      "category": "Data Science",
+      "description": "Introduction to deep learning using Python and Keras.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 28,
+      "code": "BK028",
+      "title": "Node.js Design Patterns",
+      "author": "Mario Casciaro",
+      "category": "Web Development",
+      "description": "Design patterns and best practices for Node.js applications.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 29,
+      "code": "BK029",
+      "title": "Infrastructure as Code",
+      "author": "Kief Morris",
+      "category": "DevOps",
+      "description": "Managing infrastructure using code and automation.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 30,
+      "code": "BK030",
+      "title": "Algorithms",
+      "author": "Robert Sedgewick",
+      "category": "Programming",
+      "description": "Comprehensive introduction to algorithms and data structures.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 31,
+      "code": "BK031",
+      "title": "Code Complete",
+      "author": "Steve McConnell",
+      "category": "Programming",
+      "description": "Comprehensive guide to software construction and best practices.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 32,
+      "code": "BK032",
+      "title": "SQL Antipatterns",
+      "author": "Bill Karwin",
+      "category": "Databases",
+      "description": "Common SQL mistakes and how to avoid them.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 33,
+      "code": "BK033",
+      "title": "Computer Networks",
+      "author": "Andrew S. Tanenbaum",
+      "category": "Networking",
+      "description": "Fundamental concepts of computer networking and protocols.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 34,
+      "code": "BK034",
+      "title": "The Art of Deception",
+      "author": "Kevin Mitnick",
+      "category": "Security",
+      "description": "Social engineering and the human element of security.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 35,
+      "code": "BK035",
+      "title": "Machine Learning Yearning",
+      "author": "Andrew Ng",
+      "category": "Data Science",
+      "description": "Practical strategies for structuring machine learning projects.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 36,
+      "code": "BK036",
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "category": "Web Development",
+      "description": "Classic book highlighting the elegant features of JavaScript.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 37,
+      "code": "BK037",
+      "title": "Site Reliability Engineering",
+      "author": "Betsy Beyer",
+      "category": "DevOps",
+      "description": "Google's approach to building scalable and reliable systems.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 38,
+      "code": "BK038",
+      "title": "The Mythical Man-Month",
+      "author": "Frederick P. Brooks Jr.",
+      "category": "Programming",
+      "description": "Insights into software project management and engineering.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 39,
+      "code": "BK039",
+      "title": "Seven Databases in Seven Weeks",
+      "author": "Eric Redmond",
+      "category": "Databases",
+      "description": "Hands-on exploration of modern database technologies.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 40,
+      "code": "BK040",
+      "title": "Network Security Essentials",
+      "author": "William Stallings",
+      "category": "Networking",
+      "description": "Core concepts of network security and cryptography.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 41,
+      "code": "BK041",
+      "title": "Hacking: The Art of Exploitation",
+      "author": "Jon Erickson",
+      "category": "Security",
+      "description": "Technical introduction to hacking techniques and vulnerabilities.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 3,
+      "status": "available"
+    },
+    {
+      "id": 42,
+      "code": "BK042",
+      "title": "Pattern Recognition and Machine Learning",
+      "author": "Christopher M. Bishop",
+      "category": "Data Science",
+      "description": "Mathematical foundations of machine learning algorithms.",
+      "coverImage": "",
+      "totalCopies": 4,
+      "availableCopies": 2,
+      "status": "available"
+    },
+    {
+      "id": 43,
+      "code": "BK043",
+      "title": "HTML and CSS: Design and Build Websites",
+      "author": "Jon Duckett",
+      "category": "Web Development",
+      "description": "Beginner-friendly guide to building websites.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    },
+    {
+      "id": 44,
+      "code": "BK044",
+      "title": "Continuous Delivery",
+      "author": "Jez Humble",
+      "category": "DevOps",
+      "description": "Best practices for reliable software delivery pipelines.",
+      "coverImage": "",
+      "totalCopies": 5,
+      "availableCopies": 4,
+      "status": "available"
+    },
+    {
+      "id": 45,
+      "code": "BK045",
+      "title": "Introduction to Algorithms",
+      "author": "Thomas H. Cormen",
+      "category": "Programming",
+      "description": "Comprehensive reference for algorithms and data structures.",
+      "coverImage": "",
+      "totalCopies": 6,
+      "availableCopies": 5,
+      "status": "available"
+    }
+  ],
+  "borrowRequests": [
+    {
+      "id": 1,
+      "bookId": 1,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-09",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "bookId": 1,
+      "userId": 3,
+      "status": "approved",
+      "requestDate": "2026-03-10",
+      "approvedBy": 2,
+      "note": "",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "bookId": 5,
+      "userId": 1,
+      "status": "pending",
+      "requestDate": "2026-03-11",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 4,
+      "bookId": 8,
+      "userId": 3,
+      "status": "approved",
+      "requestDate": "2026-03-11",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 5,
+      "bookId": 12,
+      "userId": 1,
+      "status": "rejected",
+      "requestDate": "2026-03-11",
+      "approvedBy": 2,
+      "note": "Book currently unavailable"
+    },
+    {
+      "id": 6,
+      "bookId": 3,
+      "userId": 3,
+      "status": "pending",
+      "requestDate": "2026-03-12",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 7,
+      "bookId": 14,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-12",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 8,
+      "bookId": 20,
+      "userId": 3,
+      "status": "pending",
+      "requestDate": "2026-03-12",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 9,
+      "bookId": 22,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-12",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 10,
+      "bookId": 11,
+      "userId": 3,
+      "status": "rejected",
+      "requestDate": "2026-03-13",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 11,
+      "bookId": 18,
+      "userId": 1,
+      "status": "pending",
+      "requestDate": "2026-03-13",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 12,
+      "bookId": 6,
+      "userId": 3,
+      "status": "approved",
+      "requestDate": "2026-03-13",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 13,
+      "bookId": 30,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-14",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 14,
+      "bookId": 25,
+      "userId": 3,
+      "status": "pending",
+      "requestDate": "2026-03-14",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 15,
+      "bookId": 40,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-14",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 16,
+      "bookId": 33,
+      "userId": 3,
+      "status": "pending",
+      "requestDate": "2026-03-14",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 17,
+      "bookId": 27,
+      "userId": 1,
+      "status": "approved",
+      "requestDate": "2026-03-15",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 18,
+      "bookId": 19,
+      "userId": 3,
+      "status": "rejected",
+      "requestDate": "2026-03-15",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "id": 19,
+      "bookId": 35,
+      "userId": 1,
+      "status": "pending",
+      "requestDate": "2026-03-15",
+      "approvedBy": null,
+      "note": ""
+    },
+    {
+      "id": 20,
+      "bookId": 41,
+      "userId": 3,
+      "status": "approved",
+      "requestDate": "2026-03-16",
+      "approvedBy": 2,
+      "note": ""
+    },
+    {
+      "bookId": 45,
+      "userId": 3,
+      "status": "handed_over",
+      "requestDate": "2026-03-11",
+      "approvedBy": 2,
+      "note": "",
+      "id": 21,
+      "handedOverAt": "2026-03-11T01:23:48.636Z"
+    }
+  ],
+  "borrowRecords": [
+    {
+      "id": 1,
+      "requestId": 1,
+      "bookId": 1,
+      "userId": 1,
+      "bookCode": "BK001",
+      "borrowDate": "2026-03-09",
+      "dueDate": "2026-03-16",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 2,
+      "requestId": 2,
+      "bookId": 1,
+      "userId": 3,
+      "bookCode": "BK001",
+      "borrowDate": "2026-03-10",
+      "dueDate": "2026-03-17",
+      "returnDate": "2026-03-15",
+      "status": "returned"
+    },
+    {
+      "id": 3,
+      "requestId": 4,
+      "bookId": 8,
+      "userId": 3,
+      "bookCode": "BK008",
+      "borrowDate": "2026-03-11",
+      "dueDate": "2026-03-18",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 4,
+      "requestId": 7,
+      "bookId": 14,
+      "userId": 1,
+      "bookCode": "BK014",
+      "borrowDate": "2026-03-12",
+      "dueDate": "2026-03-19",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 5,
+      "requestId": 9,
+      "bookId": 22,
+      "userId": 1,
+      "bookCode": "BK022",
+      "borrowDate": "2026-03-12",
+      "dueDate": "2026-03-19",
+      "returnDate": "2026-03-16",
+      "status": "returned"
+    },
+    {
+      "id": 6,
+      "requestId": 12,
+      "bookId": 6,
+      "userId": 3,
+      "bookCode": "BK006",
+      "borrowDate": "2026-03-13",
+      "dueDate": "2026-03-20",
+      "returnDate": "2026-03-11",
+      "status": "returned"
+    },
+    {
+      "id": 7,
+      "requestId": 13,
+      "bookId": 30,
+      "userId": 1,
+      "bookCode": "BK030",
+      "borrowDate": "2026-03-14",
+      "dueDate": "2026-03-21",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 8,
+      "requestId": 15,
+      "bookId": 40,
+      "userId": 1,
+      "bookCode": "BK040",
+      "borrowDate": "2026-03-14",
+      "dueDate": "2026-03-21",
+      "returnDate": "2026-03-18",
+      "status": "returned"
+    },
+    {
+      "id": 9,
+      "requestId": 17,
+      "bookId": 27,
+      "userId": 1,
+      "bookCode": "BK027",
+      "borrowDate": "2026-03-15",
+      "dueDate": "2026-03-22",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "id": 10,
+      "requestId": 20,
+      "bookId": 41,
+      "userId": 3,
+      "bookCode": "BK041",
+      "borrowDate": "2026-03-16",
+      "dueDate": "2026-03-23",
+      "returnDate": null,
+      "status": "borrowed"
+    },
+    {
+      "requestId": 21,
+      "bookId": 45,
+      "userId": 3,
+      "bookCode": "BK045",
+      "borrowDate": "2026-03-11",
+      "dueDate": "2026-03-18",
+      "returnDate": "2026-03-11",
+      "status": "returned",
+      "id": 11
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Programming"
+    },
+    {
+      "id": 2,
+      "name": "Databases"
+    },
+    {
+      "id": 3,
+      "name": "Networking"
+    },
+    {
+      "id": 4,
+      "name": "Security"
+    },
+    {
+      "id": 5,
+      "name": "Data Science"
+    },
+    {
+      "id": 6,
+      "name": "Web Development"
+    },
+    {
+      "id": 7,
+      "name": "DevOps"
+    }
+  ]
+}
