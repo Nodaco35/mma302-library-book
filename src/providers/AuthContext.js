@@ -54,6 +54,17 @@ export function AuthProvider({ children }) {
     setSessionState(null);
   }, []);
 
+  const updateSessionUser = useCallback(
+    async (nextUser) => {
+      const safeUser = toSafeUser(nextUser);
+      const next = { user: safeUser, role: safeUser?.role || session?.role || null };
+      await setSession(next);
+      setSessionState(next);
+      return safeUser;
+    },
+    [session?.role]
+  );
+
   const value = useMemo(
     () => ({
       isHydrating,
@@ -62,10 +73,10 @@ export function AuthProvider({ children }) {
       signIn,
       signUpBorrower,
       signOut,
+      updateSessionUser,
     }),
-    [isHydrating, session, signIn, signUpBorrower, signOut]
+    [isHydrating, session, signIn, signUpBorrower, signOut, updateSessionUser]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-

@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Ionicons } from "@expo/vector-icons";
 
 import { BorrowerHomeScreen } from "../../screens/borrower/BorrowerHomeScreen";
-import { BooksScreen } from "../../screens/borrower/BooksScreen";
+// import { BooksScreen } from "../../screens/borrower/BooksScreen";
 import { BorrowedScreen } from "../../screens/borrower/BorrowedScreen";
 import { BorrowerProfileScreen } from "../../screens/borrower/BorrowerProfileScreen";
 import { BookDetailScreen } from "../../screens/borrower/BookDetailScreen";
@@ -39,8 +39,16 @@ function BorrowerTabs() {
         component={BorrowerHomeScreen}
         options={{ title: "Home" }}
       />
-      <Tab.Screen name="Books" component={BooksScreen} options={{ title: "Books" }} />
-      <Tab.Screen name="Borrowed" component={BorrowedScreen} options={{ title: "Borrowed" }} />
+      {/* <Tab.Screen
+        name="Books"
+        component={BooksScreen}
+        options={{ title: "Books" }}
+      /> */}
+      <Tab.Screen
+        name="Borrowed"
+        component={BorrowedScreen}
+        options={{ title: "Borrowed" }}
+      />
       <Tab.Screen
         name="BorrowerProfile"
         component={BorrowerProfileScreen}
@@ -53,9 +61,21 @@ function BorrowerTabs() {
 export function BorrowerNavigator() {
   return (
     <Stack.Navigator screenOptions={{ headerTitleAlign: "center" }}>
-      <Stack.Screen name="BorrowerTabs" component={BorrowerTabs} options={{ headerShown: false }} />
-      <Stack.Screen name="BookDetail" component={BookDetailScreen} options={{ title: "Book" }} />
-      <Stack.Screen name="MyRequests" component={MyRequestsScreen} options={{ title: "My Requests" }} />
+      <Stack.Screen
+        name="BorrowerTabs"
+        component={BorrowerTabs}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="BookDetail"
+        component={BookDetailScreen}
+        options={{ title: "Book" }}
+      />
+      <Stack.Screen
+        name="MyRequests"
+        component={MyRequestsScreen}
+        options={{ title: "My Requests" }}
+      />
       <Stack.Screen
         name="BorrowedBooks"
         component={BorrowedBooksScreen}
@@ -69,4 +89,3 @@ export function BorrowerNavigator() {
     </Stack.Navigator>
   );
 }
-

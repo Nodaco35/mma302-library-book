@@ -58,6 +58,7 @@ export function LoginScreen({ navigation }) {
             value={email}
             onChangeText={setEmail}
             placeholder="you@example.com"
+            placeholderTextColor="#9CA3AF"
             autoCapitalize="none"
             autoCorrect={false}
             keyboardType="email-address"
@@ -79,6 +80,7 @@ export function LoginScreen({ navigation }) {
             value={password}
             onChangeText={setPassword}
             placeholder="••••••••"
+            placeholderTextColor="#9CA3AF"
             secureTextEntry
             textContentType="password"
             style={{
@@ -111,4 +113,3 @@ export function LoginScreen({ navigation }) {
     </ScreenLayout>
   );
 }
-

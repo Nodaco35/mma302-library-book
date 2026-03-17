@@ -66,6 +66,7 @@ export function RegisterScreen({ navigation }) {
             value={name}
             onChangeText={setName}
             placeholder="Your name"
+            placeholderTextColor="#9CA3AF"
             autoCapitalize="words"
             style={{
               height: 44,
@@ -84,6 +85,7 @@ export function RegisterScreen({ navigation }) {
             value={email}
             onChangeText={setEmail}
             placeholder="you@example.com"
+            placeholderTextColor="#9CA3AF"
             autoCapitalize="none"
             autoCorrect={false}
             keyboardType="email-address"
@@ -105,6 +107,7 @@ export function RegisterScreen({ navigation }) {
             value={password}
             onChangeText={setPassword}
             placeholder="••••••••"
+            placeholderTextColor="#9CA3AF"
             secureTextEntry
             textContentType="newPassword"
             style={{
@@ -126,6 +129,7 @@ export function RegisterScreen({ navigation }) {
             value={confirmPassword}
             onChangeText={setConfirmPassword}
             placeholder="••••••••"
+            placeholderTextColor="#9CA3AF"
             secureTextEntry
             style={{
               height: 44,
@@ -158,4 +162,3 @@ export function RegisterScreen({ navigation }) {
     </ScreenLayout>
   );
 }
-

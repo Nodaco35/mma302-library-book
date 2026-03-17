@@ -59,20 +59,26 @@ function CategoryChip({ label, isActive, onPress }) {
 
 function BookRow({ book, onPress }) {
   return (
-    <Pressable onPress={onPress} style={({ pressed }) => ({ opacity: pressed ? 0.85 : 1 })}>
-      <Card style={{ gap: 8 }}>
-        <View style={{ flexDirection: "row", justifyContent: "space-between", gap: 12 }}>
-          <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 16, fontWeight: "800", color: "#111827" }} numberOfLines={1}>
-              {book.title}
-            </Text>
-            <Text style={{ color: "#374151" }} numberOfLines={1}>
-              {book.author}
-            </Text>
-            <Text style={{ color: "#6B7280" }} numberOfLines={1}>
-              {book.category}
-            </Text>
-          </View>
+    <Pressable
+      onPress={onPress}
+      style={({ pressed }) => ({
+        opacity: pressed ? 0.85 : 1,
+        flex: 1,
+      })}
+    >
+      <Card style={{ gap: 8, minHeight: 150 }}>
+        <View style={{ flex: 1, gap: 6 }}>
+          <Text style={{ fontSize: 14, fontWeight: "800", color: "#111827" }} numberOfLines={2}>
+            {book.title}
+          </Text>
+          <Text style={{ color: "#374151" }} numberOfLines={1}>
+            {book.author}
+          </Text>
+          <Text style={{ color: "#6B7280" }} numberOfLines={1}>
+            {book.category}
+          </Text>
+        </View>
+        <View style={{ marginTop: "auto" }}>
           <AvailabilityPill availableCopies={book.availableCopies} />
         </View>
       </Card>
@@ -187,6 +193,8 @@ export function BorrowerHomeScreen({ navigation }) {
         <FlatList
           data={filtered}
           keyExtractor={(item) => String(item.id)}
+          numColumns={2}
+          columnWrapperStyle={{ gap: 10 }}
           contentContainerStyle={{ gap: 10, paddingBottom: 16 }}
           onRefresh={load}
           refreshing={isLoading}
@@ -206,4 +214,3 @@ export function BorrowerHomeScreen({ navigation }) {
     </ScreenLayout>
   );
 }
-
