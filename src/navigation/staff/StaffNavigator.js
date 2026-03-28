@@ -10,6 +10,7 @@ import { StaffStatsScreen } from "../../screens/staff/StaffStatsScreen";
 import { StaffProfileScreen } from "../../screens/staff/StaffProfileScreen";
 import { StaffRequestDetailScreen } from "../../screens/staff/StaffRequestDetailScreen";
 import { StaffBookFormScreen } from "../../screens/staff/StaffBookFormScreen";
+import { ChatNavigator } from "../chat/ChatNavigator";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -28,6 +29,7 @@ function StaffTabs() {
             StaffManageBooks: "library-outline",
             StaffStats: "stats-chart-outline",
             StaffProfile: "person-circle-outline",
+            StaffChats: "chatbubbles-outline",
           };
           const iconName = map[route.name] || "ellipse-outline";
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -50,6 +52,11 @@ function StaffTabs() {
         options={{ title: "Books" }}
       />
       <Tab.Screen name="StaffStats" component={StaffStatsScreen} options={{ title: "Stats" }} />
+      <Tab.Screen
+        name="StaffChats"
+        component={ChatNavigator}
+        options={{ title: "Chats", headerShown: false }}
+      />
       <Tab.Screen
         name="StaffProfile"
         component={StaffProfileScreen}
@@ -81,4 +88,3 @@ export function StaffNavigator() {
     </Stack.Navigator>
   );
 }
-

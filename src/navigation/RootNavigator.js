@@ -7,6 +7,7 @@ import { navigationTheme } from "./navigationTheme";
 import { AuthNavigator } from "./auth/AuthNavigator";
 import { BorrowerNavigator } from "./borrower/BorrowerNavigator";
 import { StaffNavigator } from "./staff/StaffNavigator";
+import { AdminNavigator } from "./admin/AdminNavigator";
 
 export function RootNavigator() {
   const auth = useContext(AuthContext);
@@ -22,7 +23,7 @@ export function RootNavigator() {
   let content = <AuthNavigator />;
   if (auth.role === "borrower") content = <BorrowerNavigator />;
   if (auth.role === "staff") content = <StaffNavigator />;
+  if (auth.role === "admin") content = <AdminNavigator />;
 
   return <NavigationContainer theme={navigationTheme}>{content}</NavigationContainer>;
 }
-

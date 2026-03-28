@@ -11,6 +11,7 @@ import { BookDetailScreen } from "../../screens/borrower/BookDetailScreen";
 import { MyRequestsScreen } from "../../screens/borrower/MyRequestsScreen";
 import { BorrowedBooksScreen } from "../../screens/borrower/BorrowedBooksScreen";
 import { BorrowHistoryScreen } from "../../screens/borrower/BorrowHistoryScreen";
+import { ChatNavigator } from "../chat/ChatNavigator";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -28,6 +29,7 @@ function BorrowerTabs() {
             Books: "book-outline",
             Borrowed: "albums-outline",
             BorrowerProfile: "person-circle-outline",
+            Chats: "chatbubbles-outline",
           };
           const iconName = map[route.name] || "ellipse-outline";
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -49,6 +51,7 @@ function BorrowerTabs() {
         component={BorrowedScreen}
         options={{ title: "Borrowed" }}
       />
+      <Tab.Screen name="Chats" component={ChatNavigator} options={{ headerShown: false }} />
       <Tab.Screen
         name="BorrowerProfile"
         component={BorrowerProfileScreen}
