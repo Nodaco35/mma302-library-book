@@ -11,6 +11,10 @@ function StatusPill({ status }) {
   const config =
     s === "approved"
       ? { bg: "#ECFDF5", border: "#6EE7B7", text: "#065F46", label: "Approved" }
+      : s === "handed_over" || s === "hand_over"
+        ? { bg: "#EEF2FF", border: "#C7D2FE", text: "#3730A3", label: "Handed Over" }
+        : s === "returned"
+          ? { bg: "#ECFEFF", border: "#67E8F9", text: "#0E7490", label: "Returned" }
       : s === "rejected"
         ? { bg: "#FEF2F2", border: "#FCA5A5", text: "#991B1B", label: "Rejected" }
         : { bg: "#FFFBEB", border: "#FCD34D", text: "#92400E", label: "Pending" };
@@ -88,15 +92,21 @@ export function MyRequestsScreen() {
     const pending = [];
     const approved = [];
     const rejected = [];
+    const handedOver = [];
+    const returned = [];
     for (const r of data) {
       const s = String(r?.status || "").toLowerCase();
       if (s === "approved") approved.push(r);
+      else if (s === "handed_over" || s === "hand_over") handedOver.push(r);
+      else if (s === "returned") returned.push(r);
       else if (s === "rejected") rejected.push(r);
       else pending.push(r);
     }
     return [
       { key: "Pending", items: pending },
       { key: "Approved", items: approved },
+      { key: "Handed Over", items: handedOver },
+      { key: "Returned", items: returned },
       { key: "Rejected", items: rejected },
     ];
   }, [data]);
@@ -149,4 +159,3 @@ export function MyRequestsScreen() {
     </ScreenLayout>
   );
 }
-

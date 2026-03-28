@@ -10,6 +10,8 @@ function RecordRow({ item }) {
   const title = item.book?.title || `Book #${item.bookId}`;
   const author = item.book?.author || "-";
   const category = item.book?.category || "-";
+  const status = String(item?.status || "").toLowerCase();
+  const statusLabel = status ? status.replace(/_/g, " ") : "-";
 
   return (
     <Card style={{ gap: 8 }}>
@@ -22,8 +24,10 @@ function RecordRow({ item }) {
       <Text style={{ color: "#6B7280" }} numberOfLines={1}>
         {category}
       </Text>
+      <Text style={{ color: "#6B7280" }}>Status: {statusLabel}</Text>
       <Text style={{ color: "#6B7280" }}>Borrowed: {item.borrowDate || "-"}</Text>
       <Text style={{ color: "#6B7280" }}>Due: {item.dueDate || "-"}</Text>
+      <Text style={{ color: "#6B7280" }}>Returned: {item.returnDate || "-"}</Text>
     </Card>
   );
 }
@@ -54,8 +58,18 @@ export function BorrowedBooksScreen() {
     load();
   }, [load]);
 
-  const current = useMemo(() => {
-    return data.filter((r) => String(r?.status || "").toLowerCase() === "borrowed" && !r?.returnDate);
+  const grouped = useMemo(() => {
+    const borrowed = [];
+    const returned = [];
+    for (const r of data) {
+      const status = String(r?.status || "").toLowerCase();
+      if (status === "borrowed" && !r?.returnDate) borrowed.push(r);
+      else returned.push(r);
+    }
+    return [
+      { key: "Borrowed", items: borrowed },
+      { key: "Returned", items: returned },
+    ];
   }, [data]);
 
   return (
@@ -76,21 +90,39 @@ export function BorrowedBooksScreen() {
         <Card>
           <Text style={{ color: "#991B1B" }}>{error}</Text>
         </Card>
-      ) : current.length === 0 ? (
+      ) : data.length === 0 ? (
         <Card>
-          <Text style={{ color: "#6B7280" }}>You have no currently borrowed books.</Text>
+          <Text style={{ color: "#6B7280" }}>You have no borrow records yet.</Text>
         </Card>
       ) : (
         <FlatList
-          data={current}
-          keyExtractor={(item) => String(item.id)}
-          contentContainerStyle={{ gap: 10, paddingBottom: 16 }}
+          data={grouped}
+          keyExtractor={(group) => group.key}
+          contentContainerStyle={{ gap: 12, paddingBottom: 16 }}
           onRefresh={load}
           refreshing={isLoading}
-          renderItem={({ item }) => <RecordRow item={item} />}
+          renderItem={({ item: group }) => (
+            <View style={{ gap: 10 }}>
+              <Text style={{ fontSize: 16, fontWeight: "900", color: "#111827" }}>
+                {group.key} ({group.items.length})
+              </Text>
+              {group.items.length === 0 ? (
+                <Card>
+                  <Text style={{ color: "#6B7280" }}>
+                    No {group.key.toLowerCase()} records.
+                  </Text>
+                </Card>
+              ) : (
+                <View style={{ gap: 10 }}>
+                  {group.items.map((r) => (
+                    <RecordRow key={String(r.id)} item={r} />
+                  ))}
+                </View>
+              )}
+            </View>
+          )}
         />
       )}
     </ScreenLayout>
   );
 }
-

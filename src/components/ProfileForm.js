@@ -49,7 +49,7 @@ export function ProfileForm({ user, onUpdated, onSignOut }) {
   return (
     <Card style={{ gap: 12 }}>
       <Text style={{ color: "#6B7280" }}>
-        You can update your display name. Important fields (email, role, id) are locked.
+        You can update your display name. Important fields (email) are locked.
       </Text>
 
       {error ? (
@@ -132,7 +132,7 @@ export function ProfileForm({ user, onUpdated, onSignOut }) {
         </View>
       </View>
 
-      <View style={{ gap: 8 }}>
+      {/* <View style={{ gap: 8 }}>
         <Text style={{ fontSize: 13, fontWeight: "600", color: "#111827" }}>User ID</Text>
         <View
           style={{
@@ -147,9 +147,9 @@ export function ProfileForm({ user, onUpdated, onSignOut }) {
         >
           <Text style={{ color: "#6B7280" }}>{user?.id ?? "-"}</Text>
         </View>
-      </View>
+      </View> */}
 
-      <View style={{ gap: 8 }}>
+      {/* <View style={{ gap: 8 }}>
         <Text style={{ fontSize: 13, fontWeight: "600", color: "#111827" }}>
           Created At
         </Text>
@@ -166,7 +166,7 @@ export function ProfileForm({ user, onUpdated, onSignOut }) {
         >
           <Text style={{ color: "#6B7280" }}>{formatDate(user?.createdAt)}</Text>
         </View>
-      </View>
+      </View> */}
 
       <PrimaryButton title="Save changes" onPress={onSave} disabled={!canSubmit} />
 

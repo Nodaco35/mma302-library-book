@@ -48,6 +48,11 @@ export async function checkInReturnByBookCode({ bookCode, borrowRecordId }) {
     availableCopies: Number(book.availableCopies || 0) + 1,
   });
 
+  if (record.requestId) {
+    await apiClient.patch(`/borrowRequests/${record.requestId}`, {
+      status: "returned",
+    });
+  }
+
   return { record: updatedRecordRes.data, book };
 }
-
